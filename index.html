@@ -5,6 +5,19 @@
 	<title>Ingatlanok - King Home Kft.</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<!--[if IE 7]><link rel="stylesheet" type="text/css" href="css/ie7.css"><![endif]-->
+	
+	<script src="http://maps.googleapis.com/maps/api/js"></script>
+	<script>
+		function initialize() {
+		  var mapProp = {
+			center:new google.maps.LatLng(47.4812134,19.1303031),
+			zoom:7,
+			mapTypeId:google.maps.MapTypeId.ROADMAP
+		  };
+		  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+		}
+		google.maps.event.addDomListener(window, 'load', initialize);
+</script>
 </head>
 <body>
 	<div id="header">
@@ -94,8 +107,7 @@
 						<a href="index.html" id="shopnow">Keresés</a>
 					</div>
 				</div>
-				<div class="last">
-					<img src="images/example_map.jpg" height="500" width="500" alt="Térkép">
+				<div id="googleMap" style="width:500px;height:380px;" class="last">
 				</div>
 			</div>
 	</div>
