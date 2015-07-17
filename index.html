@@ -1,229 +1,266 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title>Ingatlanok - King Home Kft.</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<!--[if IE 7]><link rel="stylesheet" type="text/css" href="css/ie7.css"><![endif]-->
-	
-	<script src="http://maps.googleapis.com/maps/api/js"></script>
-	<script>
-		var myCenter=new google.maps.LatLng(47.4812134,19.1303031);
-		var marker2pos=new google.maps.LatLng(47.473931,19.046312);
+    <meta charset="UTF-8">
+    <title>Ingatlanok - King Home Kft.</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!--[if IE 7]>
+    <link rel="stylesheet" type="text/css" href="css/ie7.css"><![endif]-->
 
-		function initialize()
-		{
-		var mapProp = {
-		  center:myCenter,
-		  zoom:11,
-		  mapTypeId:google.maps.MapTypeId.ROADMAP
-		  };
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script>
+        var myCenter = new google.maps.LatLng(47.456589,18.928657);
+        var marker2pos = new google.maps.LatLng(47.4764262,19.0512844);
 
-		var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+        function initialize() {
+            var mapProp = {
+                center: myCenter,
+                zoom: 11,
+                mapTypeId:google.maps.MapTypeId.HYBRID
+            };
 
-		var marker1=new google.maps.Marker({
-		  position:myCenter,
-		  });
+            var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
 
-		marker1.setMap(map);
-		
-		var marker2=new google.maps.Marker({
-		  position:marker2pos,
-		  });
+            var marker1 = new google.maps.Marker({
+                position: myCenter,
+            });
 
-		marker2.setMap(map);
-		
-		 var infowindow1 = new google.maps.InfoWindow({
-		  content:"Itt lesz egy kép, ár és link az egyik hirdetéshez."
-		  });
-		  
-		  var infowindow2 = new google.maps.InfoWindow({
-		  content:"Itt lesz egy kép, ár és link a másik hirdetéshez."
-		  });
+            marker1.setMap(map);
 
-		<!--infowindow1.open(map,marker1);-->
-		<!--infowindow1.open(map,marker2);-->
-		}
+            var marker2 = new google.maps.Marker({
+                position: marker2pos,
+            });
 
-		google.maps.event.addDomListener(window, 'load', initialize);
-</script>
+            marker2.setMap(map);
+
+            var contentString1 = '<div class="mapInfoWindow">'+
+                    '<h1 class="mapInfoWindowFirstHeading">Családi ház Budaörsön</h1>'+
+                    '<div>'+
+                    '<p><img src="images/house1.jpg" height="150" width="200" alt="Img"></p>'+
+                    '<p> 50.000.000 Ft</p>'+
+                    '<p><a href="house1.html">'+
+                    'Részletek itt</a></p>'+
+                    '</div>'+
+                    '</div>';
+
+            var contentString2 = '<div class="mapInfoWindow">'+
+                    '<h1 class="mapInfoWindowFirstHeading">Egyetemistáknak! Karinthy utcai <br/> lakás kiadó</h1>'+
+                    '<div>'+
+                    '<p><img src="images/sofa.jpg" height="150" width="200" alt="Img"></p>'+
+                    '<p> 83.000 Ft</p>'+
+                    '<p><a href="house1.html">'+
+                    'Részletek itt</a></p>'+
+                    '</div>'+
+                    '</div>';
+
+            var infowindow1 = new google.maps.InfoWindow({
+                content:contentString1
+            });
+
+            var infowindow2 = new google.maps.InfoWindow({
+                content: contentString2
+            });
+
+            google.maps.event.addListener(marker1,'click',function() {
+                infowindow1.open(map,marker1);
+                /*map.setZoom(18);
+                map.setCenter(marker1.getPosition());*/
+            });
+
+            google.maps.event.addListener(marker2,'click',function() {
+                infowindow2.open(map,marker2);
+                /*map.setZoom(18);
+                map.setCenter(marker2.getPosition());*/
+            });
+
+            <!--infowindow1.open(map,marker1);-->
+            <!--infowindow1.open(map,marker2);-->
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
 </head>
 <body>
-	<div id="header">
-		<div>
-			<a href="index.html" id="logo"><img src="images/logo.png" height="70" width="250" alt="Logo"></a>
-			<div id="languages">
-				<img src="images/hungary-flag.gif" height="20" width="25">
-				<img src="images/english_flag.jpg" height="20" width="25">
-				<img src="images/spain-flag.gif" height="20" width="25">
-			</div>
-			<ul>
-				<li class="current">
-					<a href="index.html">Ingatlanok</a>
-				</li>
-				<li>
-					<a href="services.html">Szolgáltatások</a>
-				</li>
-				<li>
-					<a href="contact.html">Kapcsolat</a>
-				</li>
-			</ul>
-			
-		</div>
-	</div>
-	<div id="body">
-			<div id="featured">
-				<div class="first">
-					<div>
-						<h2>Részletes keresés</h2>
-						<p>A találatok nem csak a listában, hanem a térképen is megjelennek.</p>
-						<div class="search">
-    <form name="searchForm" id="searchForm" method="post">
-        <div>
-            <select id="mainQuickCounty" width="200px">
-<option label="Minden megye" value="">Minden megye</option>
-<option label="Budapest" value="Budapest">Budapest</option>
-<option label="Fejér" value="Fejér">Fejér</option>
-<option label="Jász-Nagykun-Szolnok" value="Jász-Nagykun-Szolnok">Jász-Nagykun-Szolnok</option>
-<option label="Nógrád" value="Nógrád">Nógrád</option>
-<option label="Pest" value="Pest">Pest</option>
-<option label="Vas" value="Vas">Vas</option>
-<option label="Veszprém" value="Veszprém">Veszprém</option>
-</select>
+<div id="header">
+    <div>
+        <a href="index.html" id="logo"><img src="images/logo.png" height="70" width="250" alt="Logo"></a>
 
-            <select id="mainQuickCity">
-
-<option value="Minden település">Minden település</option></select>
-
+        <div id="languages">
+            <img src="images/hungary-flag.gif" height="20" width="25">
+            <img src="images/english_flag.jpg" height="20" width="25">
+            <img src="images/spain-flag.gif" height="20" width="25">
         </div>
-        <div>
-            <select>
-<option label="Minden épület típus" value="">Minden épület típus</option>
-<option label="családi ház" value="5">családi ház</option>
-<option label="luxus családi ház" value="114">luxus családi ház</option>
-<option label="lakás" value="4">lakás</option>
-<option label="luxus lakás" value="117">luxus lakás</option>
-<option label="házrész" value="17">házrész</option>
-<option label="üdülő, hétvégi ház" value="13">üdülő, hétvégi ház</option>
-<option label="telek" value="8">telek</option>
-<option label="üzlethelyiség" value="7">üzlet</option>
-<option label="raktár" value="10">raktár</option>
-<option label="garázs" value="6">garázs</option>
-<option label="mezőgazdasági ingatlan" value="31">mezőgazdasági ingatlan</option>
-<option label="pince" value="108">pince</option>
-<option label="egyéb ingatlan" value="12">egyéb ingatlan</option>
-</select>
+        <ul>
+            <li class="current">
+                <a href="index.html">Ingatlanok</a>
+            </li>
+            <li>
+                <a href="services.html">Szolgáltatások</a>
+            </li>
+            <li>
+                <a href="contact.html">Kapcsolat</a>
+            </li>
+        </ul>
 
-            <select>
-<option label="Eladó/Kiadó/Cserél" value="">Eladó/Kiadó/Cserél</option>
-<option label="Eladó" value="1">Eladó</option>
-<option label="Kiadó" value="2">Kiadó</option>
-<option label="Cserél" value="3">Cserél</option>
-</select>
-
-        </div>
-        <div>
-            <span class="size"><label for="size_from">Méret(nm):</label> <input type="text" id="size_from" value="">-tól <input type="text" id="size_to" value="">-ig</span>
-            <span class="price"><label for="price_from">Ár:</label> <input type="text" id="price_from" value="" >-tól <input type="text" id="price_to" value="" >-ig
-			            <select id="currency">
-<option label="Ft" value="1.00">Ft</option>
-<option label="Euro" value="310.00">Euro</option>
-</select>
-			</span>
-        </div>
-    </form>
+    </div>
 </div>
-						<a href="index.html" id="shopnow">Keresés</a>
-					</div>
-				</div>
-				<div id="googleMap" style="width:500px;height:380px;" class="last">
-				</div>
-			</div>
-	</div>
-	
-	
-	
-	
-				
-				
-				
-				<div id="contents">
-		<div>
-			<div class="body"  id="gallery">
-				<h1>Ingatlanok</h1>
-				<ul class="items">
-					<li>
-						<div class="frame">
-							<img src="images/house1.jpg" alt="Img">
-						</div>
-						<h5>Családi ház Budaörsön</h5>
-						<p>
-							Eladó ez a gyönyörű 2 emeletes ház. Nagyon szép, tágas, napfényes. Nagyon szeretnénk eladni.
-						</p>
-						<div class="details">
-							<p>
-								<b>Alapterület:</b> 130 m<sup>2</sup>
-							</p>
-							<p>
-								<b>Szobák:</b> 10
-							</p>
-						</div>
-						<span class="price">50.000.000 Ft</span>
-					</li>
-					<li>
-						<div class="frame">
-							<img src="images/sofa.jpg" alt="Img">
-						</div>
-						<h5>Egyetemistáknak! Karinthy utcai lakás kiadó</h5>
-						<p>
-							Igényes bérlőnek minimum 1 évre kiadó.
-						</p>
-						<div class="details">
-							<p>
-								<b>Alapterület:</b> 42 m<sup>2</sup>
-							</p>
-							<p>
-								<b>Szobák:</b> 2
-							</p>
-						</div>
-						<span class="price">83.000 Ft</span>
-					</li>
-				</ul>
-				<div id="pagination">
-					<a href="index.html" class="previous">Előző</a>
-					<a href="index.html" class="next">Következő</a>
-					<ul>
-						<li>
-							Oldalszám:
-						</li>
-						<li class="selected">
-							<a href="index.html">1</a>
-						</li>
-						<li>
-							<a href="index.html">2</a>
-						</li>
-						<li>
-							<a href="index.html">3</a>
-						</li>
-						<li>
-							<a href="index.html">4</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-				
-				
-				
-				
-				
-				
-				
-	<div id="footer">
-		<p class="footnote">
-			&copy; Copyright 2015. All rights reserved.
-		</p>
-	</div>
+<div id="body">
+    <div id="featured">
+        <div class="first">
+            <div>
+                <h2>Részletes keresés</h2>
+
+                <p>A találatok nem csak a listában, hanem a térképen is megjelennek.</p>
+
+                <div class="search">
+                    <form name="searchForm" id="searchForm" method="post">
+                        <div>
+                            <select id="mainQuickCounty" width="200px">
+                                <option label="Minden megye" value="">Minden megye</option>
+                                <option label="Budapest" value="Budapest">Budapest</option>
+                                <option label="Fejér" value="Fejér">Fejér</option>
+                                <option label="Jász-Nagykun-Szolnok" value="Jász-Nagykun-Szolnok">Jász-Nagykun-Szolnok
+                                </option>
+                                <option label="Nógrád" value="Nógrád">Nógrád</option>
+                                <option label="Pest" value="Pest">Pest</option>
+                                <option label="Vas" value="Vas">Vas</option>
+                                <option label="Veszprém" value="Veszprém">Veszprém</option>
+                            </select>
+
+                            <select id="mainQuickCity">
+
+                                <option value="Minden település">Minden település</option>
+                            </select>
+
+                        </div>
+                        <div>
+                            <select>
+                                <option label="Minden épület típus" value="">Minden épület típus</option>
+                                <option label="családi ház" value="5">családi ház</option>
+                                <option label="luxus családi ház" value="114">luxus családi ház</option>
+                                <option label="lakás" value="4">lakás</option>
+                                <option label="luxus lakás" value="117">luxus lakás</option>
+                                <option label="házrész" value="17">házrész</option>
+                                <option label="üdülő, hétvégi ház" value="13">üdülő, hétvégi ház</option>
+                                <option label="telek" value="8">telek</option>
+                                <option label="üzlethelyiség" value="7">üzlet</option>
+                                <option label="raktár" value="10">raktár</option>
+                                <option label="garázs" value="6">garázs</option>
+                                <option label="mezőgazdasági ingatlan" value="31">mezőgazdasági ingatlan</option>
+                                <option label="pince" value="108">pince</option>
+                                <option label="egyéb ingatlan" value="12">egyéb ingatlan</option>
+                            </select>
+
+                            <select>
+                                <option label="Eladó/Kiadó/Cserél" value="">Eladó/Kiadó/Cserél</option>
+                                <option label="Eladó" value="1">Eladó</option>
+                                <option label="Kiadó" value="2">Kiadó</option>
+                                <option label="Cserél" value="3">Cserél</option>
+                            </select>
+
+                        </div>
+                        <div>
+                            <span class="size"><label for="size_from">Méret(nm):</label> <input type="text"
+                                                                                                id="size_from" value="">-tól <input
+                                    type="text" id="size_to" value="">-ig</span>
+            <span class="price"><label for="price_from">Ár:</label> <input type="text" id="price_from"
+                                                                           value="">-tól <input type="text"
+                                                                                                id="price_to" value="">-ig
+			            <select id="currency">
+                            <option label="Ft" value="1.00">Ft</option>
+                            <option label="Euro" value="310.00">Euro</option>
+                        </select>
+			</span>
+                        </div>
+                    </form>
+                </div>
+                <a href="index.html" id="shopnow">Keresés</a>
+            </div>
+        </div>
+        <div id="googleMap" style="width:500px;height:380px;" class="last">
+        </div>
+    </div>
+</div>
+
+
+<div id="contents">
+    <div>
+        <div class="body" id="gallery">
+            <h1>Ingatlanok</h1>
+            <ul class="items">
+                <li>
+                    <div class="frame">
+                        <img src="images/house1.jpg" alt="Img">
+                    </div>
+                    <h5>Családi ház Budaörsön</h5>
+
+                    <p>
+                        Eladó ez a gyönyörű 2 emeletes ház. Nagyon szép, tágas, napfényes. Nagyon szeretnénk eladni.
+                    </p>
+
+                    <div class="details">
+                        <p>
+                            <b>Alapterület:</b> 130 m<sup>2</sup>
+                        </p>
+
+                        <p>
+                            <b>Szobák:</b> 10
+                        </p>
+                    </div>
+                    <span class="price">50.000.000 Ft</span>
+                </li>
+                <li>
+                    <div class="frame">
+                        <img src="images/sofa.jpg" alt="Img">
+                    </div>
+                    <h5>Egyetemistáknak! Karinthy utcai lakás kiadó</h5>
+
+                    <p>
+                        Igényes bérlőnek minimum 1 évre kiadó.
+                    </p>
+
+                    <div class="details">
+                        <p>
+                            <b>Alapterület:</b> 42 m<sup>2</sup>
+                        </p>
+
+                        <p>
+                            <b>Szobák:</b> 2
+                        </p>
+                    </div>
+                    <span class="price">83.000 Ft</span>
+                </li>
+            </ul>
+            <div id="pagination">
+                <a href="index.html" class="previous">Előző</a>
+                <a href="index.html" class="next">Következő</a>
+                <ul>
+                    <li>
+                        Oldalszám:
+                    </li>
+                    <li class="selected">
+                        <a href="index.html">1</a>
+                    </li>
+                    <li>
+                        <a href="index.html">2</a>
+                    </li>
+                    <li>
+                        <a href="index.html">3</a>
+                    </li>
+                    <li>
+                        <a href="index.html">4</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="footer">
+    <p class="footnote">
+        &copy; Copyright 2015. All rights reserved.
+    </p>
+</div>
 </body>
 </html>

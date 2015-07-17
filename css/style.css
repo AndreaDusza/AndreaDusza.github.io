@@ -970,3 +970,8 @@ input#price_to {
 #gallery {
 	margin: 0 auto
 }
+
+#body div#googleMap h1 {
+    font-size: 13px;
+    padding: 0 0;
+}
