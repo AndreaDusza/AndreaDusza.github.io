@@ -845,3 +845,128 @@ input#price_from,
 input#price_to {
 	width: 75px
 }
+
+
+
+
+
+
+
+
+/** Gallery **/
+#gallery {
+	min-height: 900px;
+	width: 860px;
+	padding: 20px 50px 0;
+}
+#gallery h1 {
+	background: url(../images/separator-light.png) repeat-x left bottom;
+	padding: 0 0 6px;
+}
+#gallery .items {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#gallery .items li {
+	background: url(../images/separator-light.png) repeat-x left bottom;
+	display: inline-block;
+	width: 100%;
+	margin: 0 0 18px;
+	padding: 0 0 24px;
+}
+#gallery .items li h5 {
+	color: white;
+	font-family: "Oswald";
+	font-size: 15px;
+	font-weight: normal;
+	margin: 0 0 18px;
+	text-transform: uppercase;
+}
+#gallery .items li p {
+	color: #626161;
+	padding-right: 10px;
+}
+#gallery .frame {
+	float: left;
+	background-position: 0 0;
+	height: 264px;
+	width: 418px;
+	margin-left: -38px;
+	padding: 1px 21px 0 41px;
+	text-align: center;
+}
+#gallery .details {
+	margin: 0 0 18px;
+}
+#gallery .items .details h5 {
+	margin: 0;
+}
+#gallery .details p {
+	color: #626161;
+	padding: 0;
+}
+#gallery .details p b {
+	color: white;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+#gallery .price {
+	color: #ab7d0f;
+	font-size: 22px;
+}
+
+
+
+
+/** Pagination **/
+#pagination {
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+}
+#pagination .previous, #pagination .next {
+	float: left;
+	background-position: 0 -69px;
+	color: white;
+	display: inline-block;
+	height: 15px;
+	padding-left: 24px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+#pagination .next {
+	float: right;
+	background-position: right -91px;
+	padding-left: 0;
+	padding-right: 24px;
+}
+#pagination ul {
+	display: inline-block;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+*width: 150px;
+}
+#pagination ul li {
+	float: left;
+	color: #626161;
+	font-size: 14px;
+	line-height: 20px;
+	margin: 0 2px;
+}
+#pagination ul li a {
+	background-color: #d2d2d2;
+	color: #626161;
+	font-size: 13px;
+	padding: 0 7px;
+	text-decoration: none;
+}
+#pagination ul li a:hover, #pagination ul li.selected a {
+	background-color: #ffc947;
+	color: #241b18;
+}
+
+#gallery {
+	margin: 0 auto
+}
