@@ -36,8 +36,8 @@
             var contentString1 = '<div class="mapInfoWindow">'+
                     '<h1 class="mapInfoWindowFirstHeading">Családi ház Budaörsön</h1>'+
                     '<div>'+
-                    '<p><img src="images/house1.jpg" height="150" width="200" alt="Img"></p>'+
-                    '<p> 50.000.000 Ft</p>'+
+                    '<p><a href="house1.html"><img src="images/house1.jpg" height="150" width="200" alt="Img">'+
+                    '</a></p><p> 50.000.000 Ft</p>'+
                     '<p><a href="house1.html">'+
                     'Részletek itt</a></p>'+
                     '</div>'+
@@ -46,7 +46,7 @@
             var contentString2 = '<div class="mapInfoWindow">'+
                     '<h1 class="mapInfoWindowFirstHeading">Egyetemistáknak! Karinthy utcai <br/> lakás kiadó</h1>'+
                     '<div>'+
-                    '<p><img src="images/sofa.jpg" height="150" width="200" alt="Img"></p>'+
+                    '<p><a href="house2.html"><img src="images/sofa.jpg" height="150" width="200" alt="Img"></a></p>'+
                     '<p> 83.000 Ft</p>'+
                     '<p><a href="house1.html">'+
                     'Részletek itt</a></p>'+
@@ -63,18 +63,11 @@
 
             google.maps.event.addListener(marker1,'click',function() {
                 infowindow1.open(map,marker1);
-                /*map.setZoom(18);
-                map.setCenter(marker1.getPosition());*/
             });
 
             google.maps.event.addListener(marker2,'click',function() {
                 infowindow2.open(map,marker2);
-                /*map.setZoom(18);
-                map.setCenter(marker2.getPosition());*/
             });
-
-            <!--infowindow1.open(map,marker1);-->
-            <!--infowindow1.open(map,marker2);-->
         }
 
         google.maps.event.addDomListener(window, 'load', initialize);
@@ -190,7 +183,9 @@
             <ul class="items">
                 <li>
                     <div class="frame">
-                        <img src="images/house1.jpg" alt="Img">
+                        <a href="house1.html">
+                            <img src="images/house1.jpg" alt="Img">
+                        </a>
                     </div>
                     <h5>Családi ház Budaörsön</h5>
 
@@ -211,7 +206,9 @@
                 </li>
                 <li>
                     <div class="frame">
-                        <img src="images/sofa.jpg" alt="Img">
+                        <a href="house2.html">
+                            <img src="images/sofa.jpg" alt="Img">
+                        </a>>
                     </div>
                     <h5>Egyetemistáknak! Karinthy utcai lakás kiadó</h5>
 

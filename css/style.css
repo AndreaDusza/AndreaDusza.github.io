@@ -158,11 +158,28 @@ width: 100px;
 	margin: 0 0 0 25px;
 	width: 320px;
 }
-#body div#featured div.first div {
+
+.house-details-first-container {
+    float: left;
+    overflow: hidden;
+    margin: 0 0 0 25px;
+    width: 400px;
+}
+
+.house-description {
+    float: left;
+    overflow: hidden;
+    margin: 0 0 0 25px;
+}
+.search {
 	float: left;
 	font-family: Georgia, "Times New Roman", Times, serif;
 	text-align: center;
 	margin: 24px 0 0;
+}
+.house-details {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    margin: 24px 0 0;
 }
 #body div#featured div.first div h2 {
 	color: #8e7835;
@@ -621,12 +638,11 @@ width: 100px;
 }
 #body div#content div#about p,
 #body div#content div#contact p {
-	letter-spacing: 0.05em;
 	line-height: 30px;
 	text-align: justify;
 }
 #body div#content div#contact div div p {
-	line-height: 24px;
+	line-height: 18px;
 }
 #body div#content div#contact div div p a.email {
 	color: #736E5F;
@@ -638,16 +654,17 @@ width: 100px;
 	padding: 5px 10px 0;
 	width: 920px;
 }
-#body div#content div#contact div {
+#body div#content div#contact .contact-inner {
 	background: url(../images/bg-border.png) repeat-y center top;
-	overflow: hidden;
-	margin: 44px 0 0;
+    height: 400px;
+	/*overflow: hidden;
+	margin: 44px 0 0;*/
 }
 #body div#content div#contact div div {
-	background: none;
+	/*background: none;
 	float: left;
-	margin: 0;
-	width: 335px;
+	margin: 0;*/
+	width: 90px;
 }
 #body div#content div#contact div div h3,
 #body div#content div#contact div form h3 {
@@ -974,4 +991,111 @@ input#price_to {
 #body div#googleMap h1 {
     font-size: 13px;
     padding: 0 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/** box-shadow **/
+.box {
+	background-color: #e7e7e7; /* Needed for IE */
+	display: inline-block;
+	-moz-box-shadow: 0 0 1px 3px rgba(207, 207, 207, 0.6);
+	-webkit-box-shadow: 0 0 1px 3px rgba(207, 207, 207, 0.6);
+	box-shadow: 0 0 1px 3px rgba(207, 207, 207, 0.6);
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3, MakeShdow=true, ShadowOpacity=0.80);
+	/* For IE 8 */
+	-ms-filter:"progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30)";
+	zoom: 1;
+}
+.box > img {
+	display: block;
+	position: relative; /* This protects the inner element from being blurred */
+}
+
+
+
+.main {
+	float: left;
+	/*min-height: 960px;*/
+	width: 600px;
+	padding: 0 0 0 32px;
+}
+.main h1 {
+	margin-bottom: 18px;
+}
+.main h2 {
+	margin-bottom: 12px;
+}
+.main h1 + h2 {
+	margin: 0;
+}
+.main h1 + div.frame3 {
+	margin-top: 36px;
+}
+.main > .section {
+	background-position: left bottom;
+	background-repeat: repeat-x;
+	width: 600px;
+	margin-bottom: 16px;
+	margin-left: -28px;
+	padding-left: 30px;
+}
+.main > .last-child, .sidebar ul li.last-child {
+	background: none;
+}
+.main > .section ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.main > .section ul li {
+	display: inline-block;
+	margin: 0 0 24px;
+	width: 600px;
+}
+.main > .section ul li .frame4 {
+	float: left;
+	margin-bottom: 1px;
+	margin-right: 20px;
+}
+.main > .section ul li p {
+	margin: 6px 0 0;
+}
+.main > .section ul li p b {
+	display: block;
+	text-transform: uppercase;
 }
