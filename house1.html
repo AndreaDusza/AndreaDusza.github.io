@@ -64,11 +64,31 @@
                 <p>
                     <b>Ár: 50.000.000 Ft </b>
                 </p>
+                <p>
+                    <b>Ingatlan állapota: </b> felújított
+                </p>
+                <p>
+                    <b>Fűtés: </b> központi
+                </p>
+                <p>
+                    <b>Komfort: </b> összkomfortos
+                </p>
+                <p>
+                    <b>Fürdőszoba és WC: </b> külön helyiségben
+                </p>
+                <p>
+                    <b>Lift: </b> nincs
+                </p>
+                <p>
+                    <b>Kert: </b> van
+                </p>
             </div>
         </div>
         <div class="last">
-            <div class="frame">
-                <img src="images/house1.jpg" alt="Img" onclick="clickedOnImage()">
+            <div class="frame" onmouseover="" style="cursor: pointer;" onclick="clickedOnImage()">
+                <img src="images/house1.jpg" width="418" height="262"><br>
+                <img src="images/house2.jpg" width="209" height="131">
+                <img src="images/sample_floor_layout.jpg" width="209" height="131">
             </div>
         </div>
 
@@ -172,14 +192,19 @@
         // build items array
         var items = [
             {
-                src: 'https://www.petfinder.com/wp-content/uploads/2012/11/99233806-bringing-home-new-cat-632x475.jpg',
+                src: "images/house1.jpg",
                 w: 600,
                 h: 400
             },
             {
-                src: 'https://placekitten.com/1200/900',
-                w: 1200,
-                h: 900
+                src: "images/house2.jpg",
+                w: 600,
+                h: 400
+            },
+            {
+                src: "images/sample_floor_layout.jpg",
+                w: 600,
+                h: 400
             }
         ];
 
