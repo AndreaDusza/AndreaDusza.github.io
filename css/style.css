@@ -89,14 +89,14 @@ width: 100px;
 	background: url(../images/bg-content.jpg) repeat-x;
 	width: 100%;
 }
-#body div#featured {
+#body div.featured {
 	margin: 0 auto;
 	min-height: 69px;
 	overflow: hidden;
 	padding: 10px 10px 0;
 	width: 930px;
 }
-#body div#featured h1 {
+#body div.featured h1 {
 	color: #8e7835;
 	font-family: Georgia, "Times New Roman", Times, serif;
 	font-size: 48px;
@@ -105,7 +105,7 @@ width: 100px;
 	margin: 0;
 	padding: 47px 0;
 }
-#body div#featured h3 {
+#body div.featured h3 {
 	color: #8e7835;
 	font-family: Georgia, "Times New Roman", Times, serif;
 	font-size: 26px;
@@ -115,25 +115,25 @@ width: 100px;
 	padding: 42px 0;
 	margin: 0;
 }
-#body div#featured h3 a {
+#body div.featured h3 a {
 	color: #8e7835;
 	border-bottom: 1px solid #8e7835;
 	text-decoration: none;
 }
-#body div#featured div.section {
+#body div.featured div.section {
 	overflow: hidden;
 	padding: 20px 0 20px;
 }
-#body div#featured div.section img {
+#body div.featured div.section img {
 	display: block;
 	float: left;
 	margin: 5px 0 0;
 }
-#body div#featured div.section div {
+#body div.featured div.section div {
 	float: right;
 	width: 530px;
 }
-#body div#featured div.section div h2 {
+#body div.featured div.section div h2 {
 	color: #8e7835;
 	font-family: Georgia, "Times New Roman", Times, serif;
 	font-size: 26px;
@@ -143,16 +143,16 @@ width: 100px;
 	margin: 0;
 	width: 490px;
 }
-#body div#featured div.section div h2 a {
+#body div.featured div.section div h2 a {
 	border-bottom: 1px solid #8e7835;
 	color: #8e7835;
 	text-decoration: none;
 }
-#body div#featured div.section div p {
+#body div.featured div.section div p {
 	letter-spacing: 0.05em;
 	text-align: justify;
 }
-#body div#featured div.first {
+#body div.featured div.first {
 	float: left;
 	overflow: hidden;
 	margin: 0 0 0 25px;
@@ -170,6 +170,7 @@ width: 100px;
     float: left;
     overflow: hidden;
     margin: 0 0 0 25px;
+	width: 620px;
 }
 .search {
 	float: left;
@@ -190,7 +191,7 @@ width: 100px;
     font-family: Georgia, "Times New Roman", Times, serif;
     margin: 24px 0 0;
 }
-#body div#featured div.first div h2 {
+#body div.featured div.first div h2 {
 	color: #8e7835;
 	font-size: 34px;
 	font-weight: normal;
@@ -198,11 +199,11 @@ width: 100px;
 	letter-spacing: 0.025em;
 	margin: 0;
 }
-#body div#featured div.first div p {
+#body div.featured div.first div p {
 	line-height: 24px;
 	margin: 0 auto;
 }
-#body div#featured div.first div a#shopnow {
+#body div.featured div.first div a#shopnow {
 	background: #736e5f;
 	border-radius: 3px;
 	color: #ffffff;
@@ -215,31 +216,31 @@ width: 100px;
 	text-align: center;
 	text-decoration: none;
 }
-#body div#featured div.first div a#shopnow:hover,
+#body div.featured div.first div a#shopnow:hover,
 #footer div div.last form input#go:hover,
 #body div#content div#contact div form input#submit:hover {
 	background: #857c61;
 }
-#body div#featured div.first span {
+#body div.featured div.first span {
 	display: block;
 	float: right;
 }
-#body div#featured div.first span img {
+#body div.featured div.first span img {
 	display: block;
 	border-left: 1px solid #000000;
 	border-right: 1px solid #000000;
 }
-#body div#featured div.last li a img:hover,
+#body div.featured div.last li a img:hover,
 #body div#content div#blog div.section ul li a img:hover {
 	filter: alpha(opacity=90);
 	opacity: 0.9;
 }
-#body div#featured div.last {
+#body div.featured div.last {
 	float: right;
 	font-family: Georgia, "Times New Roman", Times, serif;
 	margin: 25px 30px 0 0;
 }
-#body div#featured div.last h3 {
+#body div.featured div.last h3 {
 	color: #736e5f;
 	font-size: 20px;
 	font-weight: normal;
@@ -249,22 +250,22 @@ width: 100px;
 	padding: 0 0 25px;
 	text-align: center;
 }
-#body div#featured div.last ul {
+#body div.featured div.last ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
-#body div#featured div.last ul li {
+#body div.featured div.last ul li {
 	margin: 17px 0 0;
 	width: 240px;
 }
-#body div#featured div.last ul li:first-child {
+#body div.featured div.last ul li:first-child {
 	margin: 0;
 }
-#body div#featured div.last ul li p {
+#body div.featured div.last ul li p {
 	letter-spacing: 0.05em;
 }
-#body div#featured div.last li a img {
+#body div.featured div.last li a img {
 	display: block;
 	margin: 0 0 7px;
 	filter: alpha(opacity=100);
@@ -482,44 +483,46 @@ width: 100px;
 	padding: 0;
 	width: auto;
 }
-#body div#content div#services div.sidebar {
+div.sidebar {
 	background: #2e2d2a;
 	border-radius: 3px;
 	color: #948d78;
 	float: right;
-	margin: 0 10px 0 0;
+	margin: 40px 10px 0 0;
 	padding: 20px;
 	width: 220px;
 }
-#body div#content div#services div.sidebar h3 {
+
+#body div.sidebar h3 {
 	font-family: Georgia, "Times New Roman", Times, serif;
 	font-size: 16px;
 	font-weight: normal;
 	letter-spacing: 0.05em;
 	line-height: 24px;
 	margin: 0;
+	padding: 10px 0;
 }
-#body div#content div#services div.sidebar p {
+div.sidebar p {
 	letter-spacing: 0.05em;
 	padding: 0 0 10px;
 }
-#body div#content div#services div.sidebar div {
+div.sidebar div {
 	border-top: 1px solid #22201f;
 	padding: 15px 0;
 }
-#body div#content div#services div.sidebar div  p {
+div.sidebar div  p {
 	padding: 0;
 }
-#body div#content div#services div.sidebar div.first {
+div.sidebar div.first {
 	border: none;
 }
-#body div#content div#services div.sidebar div a {
+div.sidebar div a {
 	color: #948d78;
 	letter-spacing: 0.025em;
 	line-height: 24px;
 	text-decoration: none;
 }
-#body div#content div#services div.sidebar div span {
+div.sidebar div span {
 	display: block;
 	font-family: Georgia, "Times New Roman", Times, serif;
 	letter-spacing: 0.05em;
@@ -1108,3 +1111,22 @@ input#price_to {
 	display: block;
 	text-transform: uppercase;
 }
+
+
+
+table#house-details-table {
+	background: rgba(70, 65, 25, 0.56);
+	color: rgb(181, 180, 180);
+	padding: 15px;
+	border-radius: .4em;
+	overflow: hidden;
+}
+table#house-details-table tr {
+		border-color: #34495E;
+	}
+table#house-details-table th, td {
+		margin: .5em 1em;
+	}
+table#house-details-table th, td:before {
+		color: #dd5;
+	}
