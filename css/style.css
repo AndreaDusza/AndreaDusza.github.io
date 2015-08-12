@@ -177,6 +177,15 @@ width: 100px;
 	text-align: center;
 	margin: 24px 0 0;
 }
+.sale_or_rent_picker {
+	float: left;
+	padding-right: 10px;
+}
+.town-input {
+	width: 300px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
 .house-details {
     font-family: Georgia, "Times New Roman", Times, serif;
     margin: 24px 0 0;

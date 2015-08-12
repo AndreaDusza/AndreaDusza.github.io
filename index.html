@@ -79,19 +79,18 @@
         <a href="index.html" id="logo"><img src="images/logo.png" height="70" width="250" alt="Logo"></a>
 
         <div id="languages">
-            <img src="images/hungary-flag.gif" height="20" width="25">
+           <img src="images/hungary-flag.gif" height="20" width="25">
             <img src="images/english_flag.jpg" height="20" width="25">
-            <img src="images/spain-flag.gif" height="20" width="25">
         </div>
         <ul>
             <li class="current">
                 <a href="index.html">Ingatlanok</a>
             </li>
             <li>
-                <a href="services.html">Szolgáltatások</a>
+                <a href="services-hu.html">Szolgáltatások</a>
             </li>
             <li>
-                <a href="contact.html">Kapcsolat</a>
+                <a href="contact-hu.html">Kapcsolat</a>
             </li>
         </ul>
 
@@ -108,66 +107,34 @@
                 <div class="search">
                     <form name="searchForm" id="searchForm" method="post">
                         <div>
-                            <select id="mainQuickCounty" width="200px">
-                                <option label="Minden megye" value="">Minden megye</option>
-                                <option label="Budapest" value="Budapest">Budapest</option>
-                                <option label="Fejér" value="Fejér">Fejér</option>
-                                <option label="Jász-Nagykun-Szolnok" value="Jász-Nagykun-Szolnok">Jász-Nagykun-Szolnok
-                                </option>
-                                <option label="Nógrád" value="Nógrád">Nógrád</option>
-                                <option label="Pest" value="Pest">Pest</option>
-                                <option label="Vas" value="Vas">Vas</option>
-                                <option label="Veszprém" value="Veszprém">Veszprém</option>
-                            </select>
-
-                            <select id="mainQuickCity">
-
-                                <option value="Minden település">Minden település</option>
-                            </select>
-
+                            <input class="town-input" type="text" placeholder="Írja be a település nevét">
                         </div>
                         <div>
-                            <select>
-                                <option label="Minden épület típus" value="">Minden épület típus</option>
-                                <option label="családi ház" value="5">családi ház</option>
-                                <option label="luxus családi ház" value="114">luxus családi ház</option>
-                                <option label="lakás" value="4">lakás</option>
-                                <option label="luxus lakás" value="117">luxus lakás</option>
-                                <option label="házrész" value="17">házrész</option>
-                                <option label="üdülő, hétvégi ház" value="13">üdülő, hétvégi ház</option>
-                                <option label="telek" value="8">telek</option>
-                                <option label="üzlethelyiség" value="7">üzlet</option>
-                                <option label="raktár" value="10">raktár</option>
-                                <option label="garázs" value="6">garázs</option>
-                                <option label="mezőgazdasági ingatlan" value="31">mezőgazdasági ingatlan</option>
-                                <option label="pince" value="108">pince</option>
-                                <option label="egyéb ingatlan" value="12">egyéb ingatlan</option>
-                            </select>
+                            <div class="sale_or_rent_picker">
+                                    <input type="radio" name="sale_or_rent" value="Eladó" checked="true">Eladó<br>
+                                    <input type="radio" name="sale_or_rent" value="Kiadó">Kiadó<br>
+                            </div>
 
                             <select>
-                                <option label="Eladó/Kiadó/Cserél" value="">Eladó/Kiadó/Cserél</option>
-                                <option label="Eladó" value="1">Eladó</option>
-                                <option label="Kiadó" value="2">Kiadó</option>
-                                <option label="Cserél" value="3">Cserél</option>
+                                <option label="lakás">lakás</option>
+                                <option label="családi ház">családi ház</option>
+                                <option label="luxus lakás">luxus lakás</option>
+                                <option label="luxus családi ház">luxus családi ház</option>
+                                <option label="házrész">házrész</option>
+                                <option label="üdülő">üdülő</option>
+                                <option label="telek">telek</option>
+                                <option label="üzlethelyiség">üzlet</option>
+                                <option label="raktár">raktár</option>
+                                <option label="garázs">garázs</option>
+                                <option label="pince">pince</option>
+                                <option label="mezőgazd. ingatlan">mezőgazd ingatlan</option>
+                                <option label="egyéb ingatlan">egyéb ingatlan</option>
                             </select>
 
-                        </div>
-                        <div>
-                            <span class="size"><label for="size_from">Méret(nm):</label> <input type="text"
-                                                                                                id="size_from" value="">-tól <input
-                                    type="text" id="size_to" value="">-ig</span>
-            <span class="price"><label for="price_from">Ár:</label> <input type="text" id="price_from"
-                                                                           value="">-tól <input type="text"
-                                                                                                id="price_to" value="">-ig
-			            <select id="currency">
-                            <option label="Ft" value="1.00">Ft</option>
-                            <option label="Euro" value="310.00">Euro</option>
-                        </select>
-			</span>
                         </div>
                     </form>
                 </div>
-                <a href="index.html" id="shopnow">Keresés</a>
+                <div><a href="index.html" id="shopnow">Keresés</a></div>
             </div>
         </div>
         <div id="googleMap" style="width:500px;height:380px;" class="last">
@@ -225,27 +192,18 @@
                             <b>Szobák:</b> 2
                         </p>
                     </div>
-                    <span class="price">83.000 Ft</span>
+                    <span class="price">83.000 Ft/hó</span>
                 </li>
             </ul>
             <div id="pagination">
-                <a href="index.html" class="previous">Előző</a>
-                <a href="index.html" class="next">Következő</a>
+                <!--<a href="index.html" class="previous">Előző</a>
+                <a href="index.html" class="next">Következő</a>-->
                 <ul>
                     <li>
                         Oldalszám:
                     </li>
                     <li class="selected">
                         <a href="index.html">1</a>
-                    </li>
-                    <li>
-                        <a href="index.html">2</a>
-                    </li>
-                    <li>
-                        <a href="index.html">3</a>
-                    </li>
-                    <li>
-                        <a href="index.html">4</a>
                     </li>
                 </ul>
             </div>
