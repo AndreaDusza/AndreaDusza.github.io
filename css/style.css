@@ -182,11 +182,6 @@ width: 100px;
 	float: left;
 	padding-right: 10px;
 }
-.town-input {
-	width: 300px;
-	border-radius: 5px;
-	margin-bottom: 10px;
-}
 .house-details {
     font-family: Georgia, "Times New Roman", Times, serif;
     margin: 24px 0 0;
@@ -222,8 +217,8 @@ width: 100px;
 	background: #857c61;
 }
 #body div.featured div.first span {
-	display: block;
-	float: right;
+	/*display: block;*/
+	/*float: right;*/
 }
 #body div.featured div.first span img {
 	display: block;

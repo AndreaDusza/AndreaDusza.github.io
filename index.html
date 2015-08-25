@@ -1,13 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Ingatlanok - King Home Kft.</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!--[if IE 7]>
     <link rel="stylesheet" type="text/css" href="css/ie7.css"><![endif]-->
 
+    <meta charset="UTF-8">
+    <title>Ingatlanok - King Home Kft.</title>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!--script src="//cdnjs.cloudflare.com/ajax/libs/select2/3.5.2/select2.js"></script>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/select2/3.5.2/select2.min.css" rel="stylesheet" /-->
+
+    <script src="select2.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/select2.css">
+
     <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script src="towns-ordered.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#town-input-1").select2({
+                width: "300px",
+                placeholder: "Írja be a településnevet",
+                allowClear: true,
+                multiple: true,
+                maximumSelectionSize: 10,
+                data: TOWNS_LIST.map(function(city, index) { return {id: index, text: city}; }),
+                /*matcher: function(params, data) {
+                    //console.log(data);
+                    return data.text.toLowerCase().indexOf(params.term.toLowerCase()) === 0 ? data : null;
+                }*/
+
+                formatLoadMore   : 'Loading more...',
+                query            : function (q) {
+                    // pageSize is number of results to show in dropdown
+                    var pageSize,
+                            results;
+                    pageSize = 20;
+                    results  = this.data.filter(function (e) {
+                        return (q.term === "" || e.text.toUpperCase().indexOf(q.term.toUpperCase()) === 0);
+                    });
+                    q.callback({
+                        results: results.slice((q.page - 1) * pageSize, q.page * pageSize),
+                        // retrieve more when user hits bottom
+                        more   : results.length >= q.page * pageSize
+                    });
+                }
+            });
+        });
+    </script>
     <script>
         var myCenter = new google.maps.LatLng(47.456589,18.928657);
         var marker2pos = new google.maps.LatLng(47.4764262,19.0512844);
@@ -107,11 +151,12 @@
                 <div class="search">
                     <form name="searchForm" id="searchForm" method="post">
                         <div>
-                            <input class="town-input" type="text" placeholder="Írja be a település nevét">
+                            <div id="town-input-1" style="width:300px">
+                            </div>
                         </div>
                         <div>
                             <div class="sale_or_rent_picker">
-                                    <input type="radio" name="sale_or_rent" value="Eladó" checked="true">Eladó<br>
+                                    <input type="radio" name="sale_or_rent" value="Eladó" checked="checked">Eladó<br>
                                     <input type="radio" name="sale_or_rent" value="Kiadó">Kiadó<br>
                             </div>
 
