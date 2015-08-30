@@ -1,0 +1,79 @@
+[
+  {
+    "title": "Családi ház Budaörsön",
+    "description": "Eladó ez a gyönyörû 2 emeletes ház. Nagyon szép, tágas, napfényes. Nagyon szeretnénk eladni.",
+    "sizeInSquareMeters": "130",
+    "numberOfRooms": "10",
+    "price": "50.000.000 Ft",
+    "lat": "47.456589",
+    "lng": "18.928657",
+    "images": [
+      "images/house1.jpg",
+      "images/house2.jpg",
+      "images/sample_floor_layout.jpg"
+    ],
+    "locationTags":[
+      "Budaörs",
+      "Pest megye"
+    ],
+    "detailsPageUrl": "details-budaors-csaladi-haz.html",
+    "type": "családi ház",
+    "mostSpecificLocation": "Budaörs",
+    "condition": "új építésû",
+    "heating": "fatüzelésû kályha",
+    "comfortLevel": "összkomfortos",
+    "bathroomToilet": "külön helyiségben",
+    "elevator": "nincs",
+    "garden": "van"
+  },
+  {
+    "title": "Egyetemistáknak! Karinthy utcai lakás kiadó",
+    "description": "Igényes bérlõnek minimum 1 évre kiadó.",
+    "sizeInSquareMeters": 42,
+    "numberOfRooms": 2,
+    "price": "83.000 Ft/hó",
+    "lat": 47.4764262,
+    "lng": 19.0512844,
+    "images": [
+      "images/sofa.jpg",
+      "images/sample_floor_layout.jpg"
+    ],
+    "locationTags":[
+      "Budapest, XI. kerület",
+      "Budapest",
+      "Pest megye"
+    ],
+    "detailsPageUrl": "details-karinthy-kiado-lakas.html",
+    "type": "kiadó lakás",
+    "mostSpecificLocation": "Budapest, Karinthy Frigyes utca",
+    "condition": "felújított",
+    "heating": "központi",
+    "comfortLevel": "összkomfortos",
+    "bathroomToilet": "egy helyiségben",
+    "elevator": "van",
+    "garden": "nincs"
+  },
+  {
+    "title": "Gödöllõi hétvégi ház",
+    "description": "Nagyon-nagyon-nagyon érdemes megvenni.",
+    "sizeInSquareMeters": 50,
+    "numberOfRooms": 2,
+    "price": "20.000.000 Ft",
+    "lat": 47.599522,
+    "lng": 19.3655859,
+    "images": [
+      "images/godollo1.jpg",
+      "images/sample_floor_layout.jpg"
+    ],
+    "locationTags":[
+      "Gödöllõ",
+      "Pest megye"
+    ],
+    "detailsPageUrl": "details-godolloi-hetvegi-haz.html",
+    "type": "üdülõ",
+    "mostSpecificLocation": "Gödöllõ",
+    "condition": "felújított",
+    "comfortLevel": "összkomfortos",
+    "bathroomToilet": "külön helyiségben"
+  }
+]

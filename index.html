@@ -1,121 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <title>Ingatlanok - King Home Kft.</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!--[if IE 7]>
     <link rel="stylesheet" type="text/css" href="css/ie7.css"><![endif]-->
-
-    <meta charset="UTF-8">
-    <title>Ingatlanok - King Home Kft.</title>
-
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-    <!--script src="//cdnjs.cloudflare.com/ajax/libs/select2/3.5.2/select2.js"></script>
-    <link href="//cdnjs.cloudflare.com/ajax/libs/select2/3.5.2/select2.min.css" rel="stylesheet" /-->
-
     <script src="select2.js"></script>
     <link rel="stylesheet" type="text/css" href="css/select2.css">
-
     <script src="http://maps.googleapis.com/maps/api/js"></script>
     <script src="towns-ordered.js"></script>
+    <script src="index-compiled.js"></script>
 
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $("#town-input-1").select2({
-                width: "300px",
-                placeholder: "Írja be a településnevet",
-                allowClear: true,
-                multiple: true,
-                maximumSelectionSize: 10,
-                data: TOWNS_LIST.map(function(city, index) { return {id: index, text: city}; }),
-                /*matcher: function(params, data) {
-                    //console.log(data);
-                    return data.text.toLowerCase().indexOf(params.term.toLowerCase()) === 0 ? data : null;
-                }*/
-
-                formatLoadMore   : 'Loading more...',
-                query            : function (q) {
-                    // pageSize is number of results to show in dropdown
-                    var pageSize,
-                            results;
-                    pageSize = 20;
-                    results  = this.data.filter(function (e) {
-                        return (q.term === "" || e.text.toUpperCase().indexOf(q.term.toUpperCase()) === 0);
-                    });
-                    q.callback({
-                        results: results.slice((q.page - 1) * pageSize, q.page * pageSize),
-                        // retrieve more when user hits bottom
-                        more   : results.length >= q.page * pageSize
-                    });
-                }
-            });
-        });
-    </script>
-    <script>
-        var myCenter = new google.maps.LatLng(47.456589,18.928657);
-        var marker2pos = new google.maps.LatLng(47.4764262,19.0512844);
-
-        function initialize() {
-            var mapProp = {
-                center: myCenter,
-                zoom: 11,
-                mapTypeId:google.maps.MapTypeId.HYBRID
-            };
-
-            var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
-
-            var marker1 = new google.maps.Marker({
-                position: myCenter,
-            });
-
-            marker1.setMap(map);
-
-            var marker2 = new google.maps.Marker({
-                position: marker2pos,
-            });
-
-            marker2.setMap(map);
-
-            var contentString1 = '<div class="mapInfoWindow">'+
-                    '<h1 class="mapInfoWindowFirstHeading">Családi ház Budaörsön</h1>'+
-                    '<div>'+
-                    '<p><a href="house1.html"><img src="images/house1.jpg" height="150" width="200" alt="Img">'+
-                    '</a></p><p> 50.000.000 Ft</p>'+
-                    '<p><a href="house1.html">'+
-                    'Részletek itt</a></p>'+
-                    '</div>'+
-                    '</div>';
-
-            var contentString2 = '<div class="mapInfoWindow">'+
-                    '<h1 class="mapInfoWindowFirstHeading">Egyetemistáknak! Karinthy utcai <br/> lakás kiadó</h1>'+
-                    '<div>'+
-                    '<p><a href="house2.html"><img src="images/sofa.jpg" height="150" width="200" alt="Img"></a></p>'+
-                    '<p> 83.000 Ft</p>'+
-                    '<p><a href="house1.html">'+
-                    'Részletek itt</a></p>'+
-                    '</div>'+
-                    '</div>';
-
-            var infowindow1 = new google.maps.InfoWindow({
-                content:contentString1
-            });
-
-            var infowindow2 = new google.maps.InfoWindow({
-                content: contentString2
-            });
-
-            google.maps.event.addListener(marker1,'click',function() {
-                infowindow1.open(map,marker1);
-            });
-
-            google.maps.event.addListener(marker2,'click',function() {
-                infowindow2.open(map,marker2);
-            });
-        }
-
-        google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
 </head>
 <body>
 <div id="header">
@@ -193,53 +90,7 @@
     <div>
         <div class="body" id="gallery">
             <h1>Ingatlanok</h1>
-            <ul class="items">
-                <li>
-                    <div class="frame">
-                        <a href="house1.html">
-                            <img src="images/house1.jpg" alt="Img">
-                        </a>
-                    </div>
-                    <h5>Családi ház Budaörsön</h5>
-
-                    <p>
-                        Eladó ez a gyönyörű 2 emeletes ház. Nagyon szép, tágas, napfényes. Nagyon szeretnénk eladni.
-                    </p>
-
-                    <div class="details">
-                        <p>
-                            <b>Alapterület:</b> 130 m<sup>2</sup>
-                        </p>
-
-                        <p>
-                            <b>Szobák:</b> 10
-                        </p>
-                    </div>
-                    <span class="price">50.000.000 Ft</span>
-                </li>
-                <li>
-                    <div class="frame">
-                        <a href="house2.html">
-                            <img src="images/sofa.jpg" alt="Img">
-                        </a>>
-                    </div>
-                    <h5>Egyetemistáknak! Karinthy utcai lakás kiadó</h5>
-
-                    <p>
-                        Igényes bérlőnek minimum 1 évre kiadó.
-                    </p>
-
-                    <div class="details">
-                        <p>
-                            <b>Alapterület:</b> 42 m<sup>2</sup>
-                        </p>
-
-                        <p>
-                            <b>Szobák:</b> 2
-                        </p>
-                    </div>
-                    <span class="price">83.000 Ft/hó</span>
-                </li>
+            <ul class="items" id="houses-list">
             </ul>
             <div id="pagination">
                 <!--<a href="index.html" class="previous">Előző</a>

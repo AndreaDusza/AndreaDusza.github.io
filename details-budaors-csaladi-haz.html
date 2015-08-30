@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta charset="UTF-8">
+    <title>King Home Kft.</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!--[if IE 7]>
+    <link rel="stylesheet" type="text/css" href="css/ie7.css"><![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="photoswipe/photoswipe.css">
+    <link rel="stylesheet" href="photoswipe/default-skin/default-skin.css">
+    <script src="photoswipe/photoswipe.min.js"></script>
+    <script src="photoswipe/photoswipe-ui-default.min.js"></script>
+    <script src="create-house-details-page-compiled.js"></script>
+    <script src="csi.min.js"></script>
+    <script>
+        //TODO: wait for template to load properly
+        setTimeout(function(){
+            $.getJSON("../houses.json", function (json) {
+                //Edit this line to create a concrete details page
+                fillTemplateWithHouseData(json[0]);
+            });
+        },500);
+    </script>
+</head>
+<body>
+<div data-include="house-details-template.html"></div>
+</body>
+</html>

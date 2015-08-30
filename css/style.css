@@ -217,8 +217,6 @@ width: 100px;
 	background: #857c61;
 }
 #body div.featured div.first span {
-	/*display: block;*/
-	/*float: right;*/
 }
 #body div.featured div.first span img {
 	display: block;
@@ -664,13 +662,8 @@ div.sidebar div span {
 #body div#content div#contact .contact-inner {
 	background: url(../images/bg-border.png) repeat-y center top;
     height: 400px;
-	/*overflow: hidden;
-	margin: 44px 0 0;*/
 }
 #body div#content div#contact div div {
-	/*background: none;
-	float: left;
-	margin: 0;*/
 	width: 90px;
 }
 #body div#content div#contact div div h3,
@@ -1057,7 +1050,6 @@ input#price_to {
 
 .main {
 	float: left;
-	/*min-height: 960px;*/
 	width: 600px;
 	padding: 0 0 0 32px;
 }
