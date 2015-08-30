@@ -12,12 +12,12 @@ function fillTemplateWithHouseData(house) {
         "type", "mostSpecificLocation", "condition",
         "heating", "comfortLevel", "bathroomToilet", "elevator", "garden"];
     var estateAttributePrettyStrings = {
-        type: "Ingatlan típusa",
-        mostSpecificLocation: "Elhelyezkedés",
-        condition: "Ingatlan állapota",
-        heating: "Fûtés",
+        type: "Ingatlan tÃ­pusa",
+        mostSpecificLocation: "ElhelyezkedÃ©s",
+        condition: "Ingatlan Ã¡llapota",
+        heating: "FÅ±tÃ©s",
         comfortLevel: "Komfort",
-        bathroomToilet: "Fürdõszoba és WC",
+        bathroomToilet: "FÃ¼rdÅ‘szoba Ã©s WC",
         elevator: "Lift",
         garden: "Kert"
     };

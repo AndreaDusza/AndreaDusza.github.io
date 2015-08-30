@@ -3,11 +3,10 @@
  */
 
 google.maps.event.addDomListener(window, 'load', initializeMap);
-
 $(document).ready(function () {
     $("#town-input-1").select2({
         width: "300px",
-        placeholder: "Õrja be a telep¸lÈsnevet",
+        placeholder: "√çrja be a telep√ºl√©snevet",
         allowClear: true,
         multiple: true,
         maximumSelectionSize: 10,
@@ -45,8 +44,8 @@ $(document).ready(function () {
                 <h5>${i.title}</h5>
                 <p>${i.description}</p>
                 <div class="details">
-                <p><b>Alapter¸let:</b>${i.sizeInSquareMeters} m<sup>2</sup></p>
-                <p><b>Szob·k:</b> ${i.numberOfRooms}</p>
+                <p><b>Alapter√ºlet:</b>${i.sizeInSquareMeters} m<sup>2</sup></p>
+                <p><b>Szob√°k:</b> ${i.numberOfRooms}</p>
                 </div>
                 <span class="price">${i.price}</span>`
             );
@@ -77,7 +76,7 @@ function initializeMap() {
                 <div><p><a href="${i.detailsPageUrl}">
                 <img src="${i.images[0]}" height="150" width="200" alt="Img"></a></p>
                 <p>${i.price}</p>
-                <p><a href="${i.detailsPageUrl}">RÈszletek itt</a></p>
+                <p><a href="${i.detailsPageUrl}">R√©szletek itt</a></p>
                 </div>
                 </div>`;
 

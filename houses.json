@@ -1,7 +1,7 @@
 [
   {
-    "title": "Családi ház Budaörsön",
-    "description": "Eladó ez a gyönyörû 2 emeletes ház. Nagyon szép, tágas, napfényes. Nagyon szeretnénk eladni.",
+    "title": "CsalÃ¡di hÃ¡z BudaÃ¶rsÃ¶n",
+    "description": "EladÃ³ ez a gyÃ¶nyÃ¶rÅ± 2 emeletes hÃ¡z. Nagyon szÃ©p, tÃ¡gas, napfÃ©nyes. Nagyon szeretnÃ©nk eladni.",
     "sizeInSquareMeters": "130",
     "numberOfRooms": "10",
     "price": "50.000.000 Ft",
@@ -13,25 +13,25 @@
       "images/sample_floor_layout.jpg"
     ],
     "locationTags":[
-      "Budaörs",
+      "BudaÃ¶rs",
       "Pest megye"
     ],
     "detailsPageUrl": "details-budaors-csaladi-haz.html",
-    "type": "családi ház",
-    "mostSpecificLocation": "Budaörs",
-    "condition": "új építésû",
-    "heating": "fatüzelésû kályha",
-    "comfortLevel": "összkomfortos",
-    "bathroomToilet": "külön helyiségben",
+    "type": "csalÃ¡di hÃ¡z",
+    "mostSpecificLocation": "BudaÃ¶rs",
+    "condition": "Ãºj Ã©pÃ­tÃ©sÅ±",
+    "heating": "fatÃ¼zelÃ©sÅ± kÃ¡lyha",
+    "comfortLevel": "Ã¶sszkomfortos",
+    "bathroomToilet": "kÃ¼lÃ¶n helyisÃ©gben",
     "elevator": "nincs",
     "garden": "van"
   },
   {
-    "title": "Egyetemistáknak! Karinthy utcai lakás kiadó",
-    "description": "Igényes bérlõnek minimum 1 évre kiadó.",
+    "title": "EgyetemistÃ¡knak! Karinthy utcai lakÃ¡s kiadÃ³",
+    "description": "IgÃ©nyes bÃ©rlÅ‘nek minimum 1 Ã©vre kiadÃ³.",
     "sizeInSquareMeters": 42,
     "numberOfRooms": 2,
-    "price": "83.000 Ft/hó",
+    "price": "83.000 Ft/hÃ³",
     "lat": 47.4764262,
     "lng": 19.0512844,
     "images": [
@@ -39,23 +39,23 @@
       "images/sample_floor_layout.jpg"
     ],
     "locationTags":[
-      "Budapest, XI. kerület",
+      "Budapest, XI. kerÃ¼let",
       "Budapest",
       "Pest megye"
     ],
     "detailsPageUrl": "details-karinthy-kiado-lakas.html",
-    "type": "kiadó lakás",
+    "type": "kiadÃ³ lakÃ¡s",
     "mostSpecificLocation": "Budapest, Karinthy Frigyes utca",
-    "condition": "felújított",
-    "heating": "központi",
-    "comfortLevel": "összkomfortos",
-    "bathroomToilet": "egy helyiségben",
+    "condition": "felÃºjÃ­tott",
+    "heating": "kÃ¶zponti",
+    "comfortLevel": "Ã¶sszkomfortos",
+    "bathroomToilet": "egy helyisÃ©gben",
     "elevator": "van",
     "garden": "nincs"
   },
   {
-    "title": "Gödöllõi hétvégi ház",
-    "description": "Nagyon-nagyon-nagyon érdemes megvenni.",
+    "title": "GÃ¶dÃ¶llÅ‘i hÃ©tvÃ©gi hÃ¡z",
+    "description": "Nagyon-nagyon-nagyon Ã©rdemes megvenni.",
     "sizeInSquareMeters": 50,
     "numberOfRooms": 2,
     "price": "20.000.000 Ft",
@@ -66,14 +66,14 @@
       "images/sample_floor_layout.jpg"
     ],
     "locationTags":[
-      "Gödöllõ",
+      "GÃ¶dÃ¶llÅ‘",
       "Pest megye"
     ],
     "detailsPageUrl": "details-godolloi-hetvegi-haz.html",
-    "type": "üdülõ",
-    "mostSpecificLocation": "Gödöllõ",
-    "condition": "felújított",
-    "comfortLevel": "összkomfortos",
-    "bathroomToilet": "külön helyiségben"
+    "type": "Ã¼dÃ¼lÅ‘",
+    "mostSpecificLocation": "GÃ¶dÃ¶llÅ‘",
+    "condition": "felÃºjÃ­tott",
+    "comfortLevel": "Ã¶sszkomfortos",
+    "bathroomToilet": "kÃ¼lÃ¶n helyisÃ©gben"
   }
 ]

@@ -5,11 +5,10 @@
 "use strict";
 
 google.maps.event.addDomListener(window, 'load', initializeMap);
-
 $(document).ready(function () {
     $("#town-input-1").select2({
         width: "300px",
-        placeholder: "�rja be a telep�l�snevet",
+        placeholder: "Írja be a településnevet",
         allowClear: true,
         multiple: true,
         maximumSelectionSize: 10,
@@ -38,7 +37,7 @@ $(document).ready(function () {
     $.getJSON("houses.json", function (json) {
         json.forEach(function (i) {
             var li = document.createElement("li");
-            li.innerHTML = "<div class=\"frame\">\n                <a href=\"" + i.detailsPageUrl + "\">\n                <img src=\"" + i.images[0] + "\" alt=\"Img\" width=\"418px\" height=\"264px\"></a>\n                </div>\n                <h5>" + i.title + "</h5>\n                <p>" + i.description + "</p>\n                <div class=\"details\">\n                <p><b>Alapter�let:</b>" + i.sizeInSquareMeters + " m<sup>2</sup></p>\n                <p><b>Szob�k:</b> " + i.numberOfRooms + "</p>\n                </div>\n                <span class=\"price\">" + i.price + "</span>";
+            li.innerHTML = "<div class=\"frame\">\n                <a href=\"" + i.detailsPageUrl + "\">\n                <img src=\"" + i.images[0] + "\" alt=\"Img\" width=\"418px\" height=\"264px\"></a>\n                </div>\n                <h5>" + i.title + "</h5>\n                <p>" + i.description + "</p>\n                <div class=\"details\">\n                <p><b>Alapterület:</b>" + i.sizeInSquareMeters + " m<sup>2</sup></p>\n                <p><b>Szobák:</b> " + i.numberOfRooms + "</p>\n                </div>\n                <span class=\"price\">" + i.price + "</span>";
             housesList.appendChild(li);
         });
     });
@@ -60,7 +59,7 @@ function initializeMap() {
             });
             marker.setMap(map);
 
-            var contentString = "<div class=\"mapInfoWindow\">\n                <h1 class=\"mapInfoWindowFirstHeading\">" + i.title + "</h1>\n                <div><p><a href=\"" + i.detailsPageUrl + "\">\n                <img src=\"" + i.images[0] + "\" height=\"150\" width=\"200\" alt=\"Img\"></a></p>\n                <p>" + i.price + "</p>\n                <p><a href=\"" + i.detailsPageUrl + "\">R�szletek itt</a></p>\n                </div>\n                </div>";
+            var contentString = "<div class=\"mapInfoWindow\">\n                <h1 class=\"mapInfoWindowFirstHeading\">" + i.title + "</h1>\n                <div><p><a href=\"" + i.detailsPageUrl + "\">\n                <img src=\"" + i.images[0] + "\" height=\"150\" width=\"200\" alt=\"Img\"></a></p>\n                <p>" + i.price + "</p>\n                <p><a href=\"" + i.detailsPageUrl + "\">Részletek itt</a></p>\n                </div>\n                </div>";
 
             var infowindow = new google.maps.InfoWindow({
                 content: contentString

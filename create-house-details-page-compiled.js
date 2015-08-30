@@ -12,12 +12,12 @@ function fillTemplateWithHouseData(house) {
     var detailsTable = document.getElementById("house-details-table");
     var estateAttributes = ["type", "mostSpecificLocation", "condition", "heating", "comfortLevel", "bathroomToilet", "elevator", "garden"];
     var estateAttributePrettyStrings = {
-        type: "Ingatlan t�pusa",
-        mostSpecificLocation: "Elhelyezked�s",
-        condition: "Ingatlan �llapota",
-        heating: "F�t�s",
+        type: "Ingatlan típusa",
+        mostSpecificLocation: "Elhelyezkedés",
+        condition: "Ingatlan állapota",
+        heating: "Fűtés",
         comfortLevel: "Komfort",
-        bathroomToilet: "F�rd�szoba �s WC",
+        bathroomToilet: "Fürdőszoba és WC",
         elevator: "Lift",
         garden: "Kert"
     };
