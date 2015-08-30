@@ -1,24 +1,26 @@
 [
   {
+    "id": "budaors-csaladi-haz",
     "title": "Családi ház Budaörsön",
+    "mostSpecificLocation": "Budaörs",
     "description": "Eladó ez a gyönyörű 2 emeletes ház. Nagyon szép, tágas, napfényes. Nagyon szeretnénk eladni.",
-    "sizeInSquareMeters": "130",
-    "numberOfRooms": "10",
+    "forSaleOrRent": "sale",
+    "sizeInSquareMeters": 130,
+    "detailsPageUrl": "details-budaors-csaladi-haz.html",
+    "type": "családi ház",
     "price": "50.000.000 Ft",
-    "lat": "47.456589",
-    "lng": "18.928657",
+    "lat": 47.456589,
+    "lng": 18.928657,
     "images": [
       "images/house1.jpg",
       "images/house2.jpg",
       "images/sample_floor_layout.jpg"
     ],
+    "numberOfRooms": 10,
     "locationTags":[
       "Budaörs",
       "Pest megye"
     ],
-    "detailsPageUrl": "details-budaors-csaladi-haz.html",
-    "type": "családi ház",
-    "mostSpecificLocation": "Budaörs",
     "condition": "új építésű",
     "heating": "fatüzelésű kályha",
     "comfortLevel": "összkomfortos",
@@ -27,10 +29,14 @@
     "garden": "van"
   },
   {
+    "id": "karinthy-kiado-lakas",
     "title": "Egyetemistáknak! Karinthy utcai lakás kiadó",
+    "mostSpecificLocation": "Budapest, Karinthy Frigyes utca",
     "description": "Igényes bérlőnek minimum 1 évre kiadó.",
+    "forSaleOrRent": "rent",
+    "detailsPageUrl": "details-karinthy-kiado-lakas.html",
+    "type": "kiadó lakás",
     "sizeInSquareMeters": 42,
-    "numberOfRooms": 2,
     "price": "83.000 Ft/hó",
     "lat": 47.4764262,
     "lng": 19.0512844,
@@ -38,14 +44,12 @@
       "images/sofa.jpg",
       "images/sample_floor_layout.jpg"
     ],
+    "numberOfRooms": 2,
     "locationTags":[
       "Budapest, XI. kerület",
       "Budapest",
       "Pest megye"
     ],
-    "detailsPageUrl": "details-karinthy-kiado-lakas.html",
-    "type": "kiadó lakás",
-    "mostSpecificLocation": "Budapest, Karinthy Frigyes utca",
     "condition": "felújított",
     "heating": "központi",
     "comfortLevel": "összkomfortos",
@@ -54,10 +58,14 @@
     "garden": "nincs"
   },
   {
+    "id": "godolloi-hetvegi-haz.html",
     "title": "Gödöllői hétvégi ház",
+    "mostSpecificLocation": "Gödöllő",
     "description": "Nagyon-nagyon-nagyon érdemes megvenni.",
+    "forSaleOrRent": "sale",
+    "type": "üdülő",
+    "detailsPageUrl": "details-godolloi-hetvegi-haz.html",
     "sizeInSquareMeters": 50,
-    "numberOfRooms": 2,
     "price": "20.000.000 Ft",
     "lat": 47.599522,
     "lng": 19.3655859,
@@ -65,15 +73,36 @@
       "images/godollo1.jpg",
       "images/sample_floor_layout.jpg"
     ],
+    "numberOfRooms": 2,
     "locationTags":[
       "Gödöllő",
       "Pest megye"
     ],
-    "detailsPageUrl": "details-godolloi-hetvegi-haz.html",
-    "type": "üdülő",
-    "mostSpecificLocation": "Gödöllő",
     "condition": "felújított",
     "comfortLevel": "összkomfortos",
     "bathroomToilet": "külön helyiségben"
+  },
+  {
+    "id": "gyor-iroda.html",
+    "title": "Kiadó, felújított irodahelyiség irodaházban",
+    "mostSpecificLocation": "Győr, Ipari park",
+    "description": "Győrben, az ipari park és az Audi szomszédságában felújított irodák kiadók kedvező áron 30-200 m2-ig.<br/>külön mért villamos áramellátás (helyiségenként 1x25A teljesítmény)<br/>hőmennyiségmérővel mért radiátoros fűtés<br/>CAT5 számítógép hálózat helyiségenként külön kapcsolható riasztórendszer<br/>biztonsági térfigyelő rendszer<br/>közös használatú teakonyha, étkezőhelyiség micro sütővel, hűtőszekrénnyel<br/>zuhanyzási lehetőség öltöző helyiséggel (külön térítés ellenében)<br/>fénymásolási lehetőség (külön térítés ellenében)",
+    "forSaleOrRent": "rent",
+    "detailsPageUrl": "details-gyor-iroda.html",
+    "type": "iroda",
+    "sizeInSquareMeters": 30,
+    "price": "43.000 Ft/hó",
+    "lat": 47.6792439,
+    "lng": 17.7007937,
+    "images": [
+      "images/sample_floor_layout.jpg"
+    ],
+    "locationTags":[
+      "Győr-Moson-Sopron megye",
+      "Győr",
+      "Győr, Ipari park"
+    ],
+    "condition": "felújított",
+    "withFurniture": "nem"
   }
 ]

@@ -781,57 +781,10 @@ div.sidebar div span {
 	height: 25px;
 	width: 25px;
 }
-#footer div div.last div a#facebook:hover {
-	background: url(../images/icons.png) no-repeat -25px 0;
-}
-#footer div div.last div a#twitter {
-	background: url(../images/icons.png) no-repeat 0 -35px;
-	margin: 0 0 0 14px;
-	width: 38px;
-}
-#footer div div.last div a#twitter:hover {
-	background: url(../images/icons.png) no-repeat 0 -61px;
-}
-#footer div div.last div a#googleplus {
-	background: url(../images/icons.png) no-repeat 0 -97px;
-	margin: 0 0 0 18px;
-	width: 26px;
-}
-#footer div div.last div a#googleplus:hover {
-	background: url(../images/icons.png) no-repeat -26px -97px;
-}
+
 #footer div div.last form {
 	overflow: hidden;
 	margin: 0;
-}
-#footer div div.last form input#newsletter {
-	border: none;
-	color: #636466;
-	display: block;
-	float: left;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 14px;
-	height: 34px;
-	letter-spacing: 0.05em;
-	line-height: 34px;
-	margin: 0;
-	padding: 0 7px;
-	width: 236px;
-}
-#footer div div.last form input#go {
-	background: #4b4946;
-	border: none;
-	color: #ffffff;
-	cursor: pointer;
-	display: block;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 14px;
-	float: left;
-	height: 34px;
-	letter-spacing: 0.05em;
-	padding: 0;
-	text-transform: lowercase;
-	width: 40px;
 }
 #footer p.footnote {
 	color: #343434;
@@ -849,26 +802,6 @@ select {
   height: 25px;
   width: 150px
 }
-
-select#currency{
- width: 60px
-}
-
-input#size_from,
-input#size_to{
-	width: 50px
-}
-input#price_from,
-input#price_to {
-	width: 75px
-}
-
-
-
-
-
-
-
 
 /** Gallery **/
 #gallery {
@@ -907,7 +840,6 @@ input#price_to {
 #gallery .frame {
 	float: left;
 	background-position: 0 0;
-	height: 264px;
 	width: 418px;
 	margin-left: -38px;
 	padding: 1px 21px 0 41px;
@@ -988,46 +920,6 @@ input#price_to {
 	margin: 0 auto
 }
 
-#body div#googleMap h1 {
-    font-size: 13px;
-    padding: 0 0;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /** box-shadow **/
 .box {
 	background-color: #e7e7e7; /* Needed for IE */
@@ -1099,7 +991,10 @@ input#price_to {
 	text-transform: uppercase;
 }
 
-
+#body div#googleMap h1 {
+    font-size: 11px;
+    padding: 0 0;
+}
 
 table#house-details-table {
 	background: rgba(70, 65, 25, 0.56);
@@ -1109,11 +1004,25 @@ table#house-details-table {
 	overflow: hidden;
 }
 table#house-details-table tr {
-		border-color: #34495E;
-	}
+    border-color: #34495E;
+}
 table#house-details-table th, td {
-		margin: .5em 1em;
-	}
+    margin: .5em 1em;
+}
 table#house-details-table th, td:before {
-		color: #dd5;
-	}
+    color: #dd5;
+}
+
+.houseThumbnailInFrontpageList{
+    width: 313px;
+    height: 198px;
+}
+
+.houseThumbnailInMapInfoWindow{
+    width: 100px;
+    height: 75px;
+}
+
+.mapInfoWindow{
+    width: 100px;
+}
