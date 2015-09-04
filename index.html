@@ -53,8 +53,8 @@
                         </div>
                         <div>
                             <div class="sale_or_rent_picker">
-                                    <input type="radio" name="sale_or_rent" value="Eladó" checked="checked">Eladó<br>
-                                    <input type="radio" name="sale_or_rent" value="Kiadó">Kiadó<br>
+                                    <input id="checkbox_sale" type="checkbox" name="sale_or_rent" value="Eladó" checked="checked">Eladó<br>
+                                    <input id="checkbox_rent" type="checkbox" name="sale_or_rent" value="Kiadó" checked="checked">Kiadó<br>
                             </div>
 
                             <select id="selectEstateType">
@@ -63,7 +63,7 @@
                         </div>
                     </form>
                 </div>
-                <div><a href="index.html" id="shopnow">Keresés</a></div>
+                <div><a id="shopnow"  onmouseover="" style="cursor: pointer;" onclick="refreshListAndMap()">Keresés</a></div>
             </div>
         </div>
         <div id="googleMap" style="width:500px;height:380px;" class="last">
